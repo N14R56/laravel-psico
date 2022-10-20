@@ -11,6 +11,7 @@ Stack:
 
 Vapor:
 
+    PATH="$HOME/.config/composer/vendor/bin:$PATH"
     vapor deploy production
     https://6ihqfpspayyixqxyv6g77eqdty0rkdlk.lambda-url.us-east-1.on.aws
 
