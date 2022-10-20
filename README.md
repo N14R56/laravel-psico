@@ -9,6 +9,11 @@ Stack:
     composer@2.2.6
     php@8.1.2
 
+Vapor:
+
+    vapor deploy production
+    https://6ihqfpspayyixqxyv6g77eqdty0rkdlk.lambda-url.us-east-1.on.aws
+
 Ngrok
 
     cd into app root directory
