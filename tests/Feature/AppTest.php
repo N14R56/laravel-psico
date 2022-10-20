@@ -2,16 +2,10 @@
 
 namespace Tests\Feature;
 
-// use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-use function PHPUnit\Framework\assertContains;
-use function PHPUnit\Framework\assertEquals;
-use function PHPUnit\Framework\assertIsNotInt;
 use function PHPUnit\Framework\assertIsString;
 use function PHPUnit\Framework\assertNull;
-use function PHPUnit\Framework\assertSame;
-use function PHPUnit\Framework\isNull;
 
 class AppTest extends TestCase
 {

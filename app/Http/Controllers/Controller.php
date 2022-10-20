@@ -5,11 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Http\Client\Request as ClientRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Support\Facades\Http;
 
 class Controller extends BaseController
 {
@@ -49,7 +47,7 @@ class Controller extends BaseController
     public function bemEstar(Request $request): Response
     {
         return response(
-            ["dica" => "Tire um day-off, o seu gestor já foi informado."] ,
+            ["dica" => "Tire um day-off, o seu gestor já foi informado."],
             200
         );
     }
