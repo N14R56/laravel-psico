@@ -32,7 +32,6 @@ class AppTest extends TestCase
      * 
      * GET /pergunta?funcionario_id=1
      *  {
-     *      "funcionario_id":"1",
      *      "pergunta":"Como voc\u00ea est\u00e1 se sentindo hoje?"
      *  }
      * 
@@ -44,7 +43,6 @@ class AppTest extends TestCase
 
         $response = $this->get($url);
 
-        assertIsString($response->json()['funcionario_id']);
         assertIsString($response->json()['pergunta']);
 
         $response->assertStatus(201);
@@ -56,7 +54,6 @@ class AppTest extends TestCase
      * 
      * GET /pergunta?funcionario_id=dsadasda
      *  {
-     *      "funcionario_id":null,
      *      "pergunta":"Como voc\u00ea est\u00e1 se sentindo hoje?"
      *  }
      * 
@@ -67,8 +64,6 @@ class AppTest extends TestCase
         $url = '/pergunta?funcionario_id=';
 
         $response = $this->get($url);
-
-        assertNull($response->json()['funcionario_id']);
 
         assertIsString($response->json()['pergunta']);
 

@@ -37,7 +37,6 @@ class Controller extends BaseController
 
         return response(
             [
-                'funcionario_id' => $request->get('funcionario_id'),
                 'pergunta' => 'Como você está se sentindo hoje?'
             ],
             $status
@@ -47,7 +46,9 @@ class Controller extends BaseController
     public function bemEstar(Request $request): Response
     {
         return response(
-            ["dica" => "Tire um day-off, o seu gestor já foi informado."],
+            [
+                "dica" => "Tire um day-off, o seu gestor já foi informado."
+            ],
             200
         );
     }
