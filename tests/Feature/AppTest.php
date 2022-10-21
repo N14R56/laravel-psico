@@ -106,7 +106,7 @@ class AppTest extends TestCase
     /**
      * Resgata o qrcode do funcionario.
      * 
-     * GET /resposta
+     * GET /qrcode?funcionario_id=1
      *  {
      *      "funcionario_id" : 1,
      *  }
@@ -127,7 +127,7 @@ class AppTest extends TestCase
     /**
      * Cria o qrcode do funcionario
      * 
-     * POST /resposta
+     * POST /qrcode
      *  {
      *      "funcionario_id" : 1,
      *  }
@@ -153,7 +153,7 @@ class AppTest extends TestCase
     /**
      * Cria as dicas para o funcionario
      * 
-     * POST /resposta
+     * POST /dica
      *  {
      *      "funcionario_id" : 1,
      *  }
