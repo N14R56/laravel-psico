@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/bem-estar', [Controller::class, 'responderBemEstar']);
+Route::get('/bem-estar', [Controller::class, 'consultarBemEstar']);

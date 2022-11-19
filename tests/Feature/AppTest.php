@@ -15,31 +15,28 @@ class AppTest extends TestCase
      * 
      * POST /bem-estar
      *  {
-     *      "funcionario_id" : 1,
-     *      "bem-estar" : 1
+     *      "id_funcionario" : "1",
+     *      "data" : "18/11/2022",
+     *      "bem_estar" : "4"
      *  }
      * 
      *  200
-     *  {
-     *      "dica" : "Tire um day-off, o seu gestor já foi informado." 
-     *  }
      */
     public function test_1(): void
     {
         $url = '/bem-estar';
 
         $body = [
-            'funcionario_id' => 1,
-            'bem-estar' => 1,
+            "id_funcionario" => "1",
+            "data" => "18/11/2022",
+            "bem_estar" => "5"
         ];
 
         $response = $this->post(
             $url,
             $body
         );
-        
 
-        assertIsString($response->json()['dica']);
         $response->assertStatus(200);
     }
 }

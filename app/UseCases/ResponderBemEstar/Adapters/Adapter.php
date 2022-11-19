@@ -18,9 +18,6 @@ class Adapter
 
     private function setInputContract(Request $request)
     {
-        // dd($request->get('id_funcionario'));
-        // dd($request->get('data'));
-        // dd($request->get('bem_estar'));
         $this->inputContract = new InputContract;
         $this->inputContract->idFuncionario = $request->get('id_funcionario');
         $this->inputContract->data = $request->get('data');
