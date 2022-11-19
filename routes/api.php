@@ -14,10 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/bem-vindos', [Controller::class, 'bem_vindos']);
-Route::get('/pergunta', [Controller::class, 'pergunta']);
-Route::post('/bem-estar', [Controller::class, 'bemEstar']);
-Route::get('/qrcode', [Controller::class, 'qrcode']);
-Route::post('/qrcode', [Controller::class, 'qrcode']);
-Route::get('/dica', [Controller::class, 'dica']);
-Route::post('/dica', [Controller::class, 'dica']);
+Route::post('/bem-estar', [Controller::class, 'responderBemEstar']);
