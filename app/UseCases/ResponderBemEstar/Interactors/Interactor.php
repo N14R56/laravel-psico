@@ -7,7 +7,7 @@ use App\UseCases\ConsultarBemEstar\EntitiesApplication\ConsultorBemEstar;
 
 class Interactor
 {
-    public string $dados;
+    public array $dados;
 
     public function __construct(
         $idFuncionario,
@@ -22,9 +22,7 @@ class Interactor
             $bemEstar
         );
 
-        $consultor = new ConsultorBemEstar(
-            $idFuncionario
-        );
+        $consultor = new ConsultorBemEstar();
 
         $this->dados = $consultor->dados;
     }

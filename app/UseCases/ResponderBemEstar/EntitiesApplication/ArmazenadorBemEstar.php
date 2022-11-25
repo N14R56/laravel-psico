@@ -2,6 +2,8 @@
 
 namespace App\UseCases\ResponderBemEstar\EntitiesApplication;
 
+use Illuminate\Support\Facades\DB;
+
 class ArmazenadorBemEstar
 {
     public function __construct(
@@ -10,10 +12,9 @@ class ArmazenadorBemEstar
         $bemEstar
     )
     {
-        file_put_contents(
-            "funcionarios/id.{$idFuncionario}.txt",
-            $data . ':' . $bemEstar . PHP_EOL,
-            FILE_APPEND
+        DB::insert(
+            "INSERT INTO bem_estar (id_funcionario, bem_estar, data) VALUES (?, ?, ?)",
+            [$idFuncionario, $bemEstar, $data]
         );
     }
 }

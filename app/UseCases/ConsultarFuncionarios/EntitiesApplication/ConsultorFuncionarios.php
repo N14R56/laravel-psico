@@ -1,17 +1,17 @@
 <?php
 
-namespace App\UseCases\ConsultarBemEstar\EntitiesApplication;
+namespace App\UseCases\ConsultarFuncionarios\EntitiesApplication;
 
 use Illuminate\Support\Facades\DB;
 
-class ConsultorBemEstar
+class ConsultorFuncionarios
 {
     public array $dados;
 
     public function __construct()
     {
         $this->dados = DB::select(
-            "SELECT * FROM bem_estar"
+            "SELECT * FROM funcionarios"
         );
     }
 }
